@@ -104,7 +104,7 @@ public class Game extends Slither implements KeyListener, WindowListener {
         for (int i = 1; i < snake.size() - 1; i++) {
             setSprite(i, "Horizontal");
         }
-        char previousDirection = direction.get(direction.size() - 2);
+        char previousDirection = turn;
         do {
             int tail = move();
             setSprite(tail, "Empty");
@@ -129,7 +129,7 @@ public class Game extends Slither implements KeyListener, WindowListener {
                 setSprite(snake.get(snake.size() - 2), ((previousDirection == 'U') ? "D" : "U") + String.valueOf(direction.getLast()));
             }
             setSprite(snake.getFirst(), "Tail " + direction.get(1));
-            previousDirection = direction.getLast();
+            previousDirection = turn;
             try {
                 TimeUnit.MILLISECONDS.sleep(wait);
             } catch (Exception e) {}

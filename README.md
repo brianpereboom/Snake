@@ -4,5 +4,5 @@
   1. Clone Repository
   2. Run `javac Game.java`
 
-### Run Instructions
+#### Run Instructions
 Run `java Game.java` and play with WASD or arrow keys.
